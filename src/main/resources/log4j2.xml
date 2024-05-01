@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="all">
+    <Appenders>
+        <MyAppender name="myAppender">
+            <MessageTemplate prefix="Hello, " suffix="!"/>
+        </MyAppender>
+    </Appenders>
+    <Loggers>
+        <Root level="ALL">
+            <AppenderRef ref="myAppender"/>
+        </Root>
+    </Loggers>
+</Configuration>
