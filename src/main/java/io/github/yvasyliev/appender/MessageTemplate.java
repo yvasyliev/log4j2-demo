@@ -10,8 +10,8 @@ import org.apache.logging.log4j.plugins.PluginFactory;
 @Plugin("MessageTemplate")
 public record MessageTemplate(String prefix, String suffix) {
     @PluginFactory
-    public static MessageTemplate createAppender(@PluginAttribute String prefix,
-                                                 @PluginAttribute String suffix) {
+    public static MessageTemplate createAppender(@PluginAttribute("prefix") String prefix,
+                                                 @PluginAttribute("suffix") String suffix) {
         return new MessageTemplate(prefix, suffix);
     }
 }

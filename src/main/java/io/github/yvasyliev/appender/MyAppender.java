@@ -22,8 +22,8 @@ public class MyAppender extends AbstractAppender {
     }
 
     @PluginFactory
-    public static MyAppender createAppender(@PluginAttribute String name,
-                                            @PluginElement MessageTemplate messageTemplate) {
+    public static MyAppender createAppender(@PluginAttribute("name") String name,
+                                            @PluginElement("MessageTemplate") MessageTemplate messageTemplate) {
         return new MyAppender(name, messageTemplate);
     }
 
